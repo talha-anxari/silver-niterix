@@ -1,0 +1,55 @@
+@media(max-width: 1600px){
+
+}
+
+@media(max-width: 1445px){
+    
+}
+@media(max-width: 1366px){
+    
+}
+@media(max-width: 1199px){
+    
+}
+@media(max-width: 991px){
+    
+}
+@media(max-width: 767px){
+    .hero-content {
+    display: flex;
+    align-items: center;
+    flex-direction: column-reverse;
+}
+.book-mockup{
+    height: auto;
+}
+    
+}
+@media(max-width: 575px){
+    .hero-subtitle {
+    margin: 0 0 1rem;
+}
+
+.hero-content {
+    padding: 3rem 1rem 1rem;
+}
+
+.hero-cta {
+    padding: 1rem;
+}
+.about {
+    padding: 1rem;
+}
+.book-card {
+    flex-direction: column;
+    padding: 1rem;
+    gap: 28px;
+}
+
+.mini-book {
+    width: 100%;
+}
+}
+@media(max-width: 320px){
+    
+}
