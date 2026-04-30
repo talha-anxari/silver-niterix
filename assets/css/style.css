@@ -615,13 +615,19 @@
 
  .book-mockup {
      width: 280px;
-     height: 380px;
+     height: auto;
      position: relative;
      transform: perspective(1000px) rotateY(-12deg) rotateX(3deg);
      transform-style: preserve-3d;
      animation: float 6s infinite ease-in-out;
      filter: drop-shadow(0 40px 60px rgba(0, 0, 0, 0.6)) drop-shadow(0 0 30px rgba(201, 168, 76, 0.15));
  }
+  .book-mockup img{
+    width: 100%;
+        height: auto;
+        object-fit: cover;
+        border-radius: 4px 8px 8px 4px;
+  }
 
  @keyframes float {
 
@@ -638,22 +644,15 @@
  .book-cover {
      width: 100%;
      height: 100%;
-     background: linear-gradient(135deg, #1a1020 0%, #2a1a35 40%, #1a0a25 100%);
+     /* background: linear-gradient(135deg, #1a1020 0%, #2a1a35 40%, #1a0a25 100%); */
      border-radius: 4px 8px 8px 4px;
      display: flex;
      flex-direction: column;
      align-items: center;
      justify-content: center;
-     padding: 30px;
+     /* padding: 30px; */
      position: relative;
      overflow: hidden;
- }
-
- .book-cover::before {
-     content: '';
-     position: absolute;
-     inset: 0;
-     background: linear-gradient(45deg, transparent 40%, rgba(201, 168, 76, 0.08) 100%);
  }
 
  .book-cover-title {
@@ -832,162 +831,261 @@
  }
 
  /* ─── BOOKS ─── */
- .books-section {
-     padding: 120px 60px;
-     background: var(--dark2);
-     position: relative;
-     overflow: hidden;
- }
-
- .books-section::before {
-     content: '';
-     position: absolute;
-     top: 0;
-     left: 50%;
-     transform: translateX(-50%);
-     width: 800px;
-     height: 800px;
-     background: radial-gradient(ellipse, rgba(201, 168, 76, 0.04) 0%, transparent 70%);
- }
-
- .books-header {
-     text-align: center;
-     margin-bottom: 80px;
- }
-
- .books-grid {
-     display: grid;
-     grid-template-columns: 1fr 1fr;
-     gap: 60px;
-     max-width: 1000px;
-     margin: 0 auto;
- }
-
- .book-card {
-     display: flex;
-     gap: 40px;
-     align-items: flex-start;
-     padding: 40px;
-     border: 1px solid rgba(201, 168, 76, 0.1);
-     background: rgba(255, 255, 255, 0.02);
-     position: relative;
-     overflow: hidden;
-     transition: border-color 0.3s, transform 0.3s;
- }
-
- .book-card:hover {
-     border-color: rgba(201, 168, 76, 0.3);
-     transform: translateY(-4px);
- }
-
- .book-card::after {
-     content: '';
-     position: absolute;
-     inset: 0;
-     background: linear-gradient(135deg, rgba(201, 168, 76, 0.03) 0%, transparent 100%);
-     opacity: 0;
-     transition: opacity 0.3s;
-     z-index: -1;
- }
-
- .book-card:hover::after {
-     opacity: 1;
- }
-
- .mini-book {
-     width: 110px;
-     flex-shrink: 0;
-     height: 150px;
-     border-radius: 3px 6px 6px 3px;
-     display: flex;
-     flex-direction: column;
-     align-items: center;
-     justify-content: center;
-     padding: 15px;
-     position: relative;
-     overflow: hidden;
- }
-
- .mini-book-1 {
-     background: linear-gradient(135deg, #1a1020 0%, #2a1a35 100%);
- }
-
- .mini-book-2 {
-     background: linear-gradient(135deg, #101520 0%, #1a2535 100%);
- }
-
- .mini-book-title {
-     font-family: 'Cormorant Garamond', serif;
-     font-size: 13px;
-     color: var(--cream);
-     text-align: center;
-     font-weight: 600;
-     line-height: 1.2;
-     margin-bottom: 6px;
- }
-
- .mini-book-author {
-     font-size: 9px;
-     color: var(--gold);
-     text-align: center;
- }
-
- .book-info {
-     flex: 1;
- }
-
- .book-tag {
-     display: inline-block;
-     padding: 4px 12px;
-     font-size: 9px;
-     letter-spacing: 2px;
-     text-transform: uppercase;
-     margin-bottom: 12px;
- }
-
- .book-tag.available {
-     border: 1px solid var(--gold);
-     color: var(--gold);
- }
-
- .book-tag.coming-soon {
-     border: 1px solid var(--silver);
-     color: var(--silver);
- }
-
- .book-title {
-     font-family: 'Cormorant Garamond', serif;
-     font-size: 22px;
-     color: var(--cream);
-     margin-bottom: 10px;
- }
-
- .book-desc {
-     font-size: 12px;
-     line-height: 1.8;
-     color: var(--text-muted);
-     margin-bottom: 20px;
- }
-
- .btn-amazon {
-     display: inline-flex;
-     align-items: center;
-     gap: 8px;
-     padding: 10px 22px;
-     background: var(--gold);
-     color: var(--dark);
-     text-decoration: none;
-     font-size: 10px;
-     letter-spacing: 2px;
-     text-transform: uppercase;
-     font-weight: 600;
-     transition: all 0.3s;
- }
-
- .btn-amazon:hover {
-     background: var(--gold-light);
-     transform: scale(1.03);
- }
+/* ===== BOOKS SECTION ===== */
+    .books-section {
+      padding: 120px 60px;
+      background: var(--dark2);
+      position: relative;
+      overflow: hidden;
+    }
+ 
+    .books-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 800px;
+      height: 800px;
+      background: radial-gradient(ellipse, rgba(201, 168, 76, 0.05) 0%, transparent 70%);
+      pointer-events: none;
+      z-index: 0;
+    }
+ 
+    /* ===== HEADER ===== */
+    .books-header {
+      text-align: center;
+      margin-bottom: 80px;
+      position: relative;
+      z-index: 1;
+    }
+ 
+    .section-label {
+      font-size: 10px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 14px;
+      font-family: sans-serif;
+    }
+ 
+    .section-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 48px;
+      font-weight: 600;
+      color: var(--cream);
+      line-height: 1.1;
+    }
+ 
+    .section-title em {
+      font-style: italic;
+      color: var(--gold);
+    }
+ 
+    /* ===== MASONRY GRID ===== */
+    .books-masonry {
+      columns: 2;
+      column-gap: 30px;
+      max-width: 1200px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+ 
+    /* ===== BOOK CARD ===== */
+    .book-card {
+      break-inside: avoid;
+      margin-bottom: 30px;
+      border: 1px solid rgba(201, 168, 76, 0.12);
+      background: rgba(255, 255, 255, 0.025);
+      position: relative;
+      overflow: hidden;
+      transition: border-color 0.35s ease, transform 0.35s ease;
+      display: flex;
+      flex-direction: column;
+    }
+ 
+    .book-card:hover {
+      border-color: rgba(201, 168, 76, 0.38);
+      transform: translateY(-4px);
+    }
+ 
+    .book-card::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(201, 168, 76, 0.04) 0%, transparent 100%);
+      opacity: 0;
+      transition: opacity 0.35s ease;
+      pointer-events: none;
+      z-index: 0;
+    }
+ 
+    .book-card:hover::after {
+      opacity: 1;
+    }
+ 
+    /* ===== IMAGE WRAPPER ===== */
+    /* 
+      KEY: height: auto on img = image keeps its natural ratio.
+      No fixed heights. Portrait and landscape both work perfectly.
+    */
+    .book-img-wrap {
+      width: 100%;
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+    }
+ 
+    .book-img-wrap img {
+      width: 100%;
+      height: auto;
+      display: block;
+      transition: transform 0.5s ease;
+    }
+ 
+    .book-card:hover .book-img-wrap img {
+      transform: scale(1.03);
+    }
+ 
+    /* Gradient overlay at image bottom */
+    .book-img-wrap::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 90px;
+      background: linear-gradient(to top, rgba(19, 17, 16, 0.9), transparent);
+      pointer-events: none;
+    }
+ 
+    /* 
+      For landscape images that might render too tall in a column,
+      add class "img-landscape" to .book-img-wrap to cap the height.
+    */
+    .book-img-wrap.img-landscape img {
+      max-height: 380px;
+      object-fit: cover;
+      object-position: center top;
+    }
+ 
+    /* ===== BOOK INFO ===== */
+    .book-info {
+      padding: 24px 28px 30px;
+      flex: 1;
+      position: relative;
+      z-index: 1;
+    }
+ 
+    .book-tag {
+      display: inline-block;
+      padding: 4px 12px;
+      font-size: 9px;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+      font-family: sans-serif;
+    }
+ 
+    .book-tag.available {
+      border: 1px solid var(--gold);
+      color: var(--gold);
+    }
+ 
+    .book-tag.coming-soon {
+      border: 1px solid var(--silver);
+      color: var(--silver);
+    }
+ 
+    .book-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 24px;
+      font-weight: 600;
+      color: var(--cream);
+      margin-bottom: 10px;
+      line-height: 1.2;
+    }
+ 
+    .book-desc {
+      font-size: 12px;
+      line-height: 1.85;
+      color: var(--text-muted);
+      margin-bottom: 20px;
+      font-family: sans-serif;
+      font-weight: 400;
+    }
+ 
+    .btn-amazon {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 22px;
+      background: var(--gold);
+      color: var(--dark);
+      text-decoration: none;
+      font-size: 9px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      font-weight: 700;
+      font-family: sans-serif;
+      transition: background 0.3s ease, transform 0.3s ease;
+    }
+ 
+    .btn-amazon:hover {
+      background: var(--gold-light);
+      transform: scale(1.04);
+    }
+ 
+    .btn-amazon svg {
+      flex-shrink: 0;
+    }
+ 
+    .coming-soon-label {
+      font-size: 10px;
+      letter-spacing: 2.5px;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      margin-top: 10px;
+      font-family: sans-serif;
+    }
+ 
+    /* ===== REVEAL ANIMATION ===== */
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+ 
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+ 
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 900px) {
+      .books-section {
+        padding: 80px 30px;
+      }
+      .section-title {
+        font-size: 38px;
+      }
+    }
+ 
+    @media (max-width: 640px) {
+      .books-masonry {
+        columns: 1;
+      }
+      .books-section {
+        padding: 70px 20px;
+      }
+      .section-title {
+        font-size: 32px;
+      }
+      .books-header {
+        margin-bottom: 50px;
+      }
+    }
 
  /* ─── MESSAGE SECTION ─── */
  .message-section {

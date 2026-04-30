@@ -23,11 +23,18 @@
 .book-mockup{
     height: auto;
 }
+.hero {
+    min-height: 890px;
+}
     
 }
 @media(max-width: 575px){
     .hero-subtitle {
     margin: 0 0 1rem;
+}
+
+.hero {
+    min-height: 900px;
 }
 
 .hero-content {
@@ -62,6 +69,11 @@
     gap: 1rem;
 }
 
+.book-info
+ {
+    padding: 0rem;
+}
+
 .message-section {
     padding: 3rem 1rem;
     height: a;
@@ -77,6 +89,13 @@
 
 .footer-section {
     padding: 3rem 0;
+}
+.cursor {
+    display: none;
+}
+
+#cursorRing {
+    display: none;
 }
 }
 @media(max-width: 320px){
