@@ -23,6 +23,9 @@
 .book-mockup{
     height: auto;
 }
+.chapters-grid {
+        grid-template-columns: 1fr 1fr;
+    }
 .hero {
     min-height: 890px;
 }
@@ -52,6 +55,9 @@
     padding: 1rem;
     gap: 28px;
 }
+.chapters-grid {
+        grid-template-columns: 1fr;
+    }
 
 .mini-book {
     width: 100%;

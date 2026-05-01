@@ -5,6 +5,7 @@
             }, 1800);
         });
 
+
         // ── Cursor ──
         const cursor = document.getElementById('cursor');
         const ring = document.getElementById('cursorRing');
@@ -97,6 +98,7 @@
     hamburger.addEventListener('click', toggleMenu);
     menuOverlay.addEventListener('click', closeMenu);
 
+
     // Close menu when clicking on a nav link (smooth scroll)
     const navLinksItems = document.querySelectorAll('.nav-links a');
     navLinksItems.forEach(link => {
@@ -184,3 +186,46 @@
             }
         });
     });
+
+
+    // ===== FANCYBOX INIT =====
+Fancybox.bind('[data-fancybox="gallery"]', {
+  animated: true,
+  showClass: "fancybox-zoomIn",
+  hideClass: "fancybox-zoomOut",
+
+  Thumbs: {
+    type: "classic",
+  },
+
+  Toolbar: {
+    display: {
+      left: ["infobar"],
+      middle: [],
+      right: ["slideshow", "thumbs", "close"],
+    },
+  },
+
+  Images: {
+    zoom: true,
+  },
+
+  Carousel: {
+    transition: "fade",
+  },
+});
+
+
+// ===== REVEAL ON SCROLL =====
+const reveals = document.querySelectorAll('.reveal');
+
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      revealObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.1 });
+
+reveals.forEach(el => revealObserver.observe(el));

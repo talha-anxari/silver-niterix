@@ -10,6 +10,9 @@
         rel="stylesheet">
     <!-- Remix icon -->
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.js"></script>
     <!-- css link -->
     <link rel="stylesheet" href="assets/css/style.css">
     <!-- responsive link -->
@@ -50,6 +53,7 @@
             <li><a href="#contact">Contact Us</a></li>
         </ul>
     </nav>
+    <div id="menuOverlay"></div>
 
     <!-- Hero Section -->
     <section class="hero" id="home">
@@ -155,7 +159,7 @@
             <!-- ===== BOOK 1 (Portrait image) ===== -->
             <div class="book-card reveal">
                 <div class="book-img-wrap">
-                    <img src="assets/images/book4.jpg" alt="Powers Unleashed">
+                    <img src="assets/images/book4.webp" alt="Powers Unleashed">
                 </div>
                 <div class="book-info">
                     <span class="book-tag available">Available on Amazon</span>
@@ -306,6 +310,110 @@
 
     <div class="divider"></div>
 
+    <section class="gallery-section" id="gallery">
+
+        <!-- Header -->
+        <div class="gallery-header reveal">
+            <p class="section-label">Visual Journey</p>
+            <h2 class="section-title">The <em>Gallery</em></h2>
+            <div class="title-divider"></div>
+        </div>
+
+        <!-- Gallery Grid -->
+        <div class="gallery-grid">
+
+            <!-- Row 1: Images 1, 2, 3 -->
+            <a class="gallery-item reveal" href="assets/images/gallery-img1.webp" data-fancybox="gallery"
+                data-caption="Gallery Image 1">
+                <div class="img-wrap">
+                    <img src="assets/images/gallery-img1.webp" alt="Gallery Image 1" loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="overlay-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.5">
+                                <circle cx="11" cy="11" r="8" />
+                                <path d="M21 21l-4.35-4.35M11 8v6M8 11h6" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a class="gallery-item reveal" href="assets/images/gallery-img2.webp" data-fancybox="gallery"
+                data-caption="Gallery Image 2">
+                <div class="img-wrap">
+                    <img src="assets/images/gallery-img2.webp" alt="Gallery Image 2" loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="overlay-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.5">
+                                <circle cx="11" cy="11" r="8" />
+                                <path d="M21 21l-4.35-4.35M11 8v6M8 11h6" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a class="gallery-item reveal" href="assets/images/gallery-img3.webp" data-fancybox="gallery"
+                data-caption="Gallery Image 3">
+                <div class="img-wrap">
+                    <img src="assets/images/gallery-img3.webp" alt="Gallery Image 3" loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="overlay-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.5">
+                                <circle cx="11" cy="11" r="8" />
+                                <path d="M21 21l-4.35-4.35M11 8v6M8 11h6" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Row 2: Images 4 & 5 — centered in 2-col wrapper -->
+            <div class="gallery-row-2">
+
+                <a class="gallery-item reveal" href="assets/images/gallery-img4.webp" data-fancybox="gallery"
+                    data-caption="Gallery Image 4">
+                    <div class="img-wrap">
+                        <img src="assets/images/gallery-img4.webp" alt="Gallery Image 4" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="overlay-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="1.5">
+                                    <circle cx="11" cy="11" r="8" />
+                                    <path d="M21 21l-4.35-4.35M11 8v6M8 11h6" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <a class="gallery-item reveal" href="assets/images/gallery-img5.webp" data-fancybox="gallery"
+                    data-caption="Gallery Image 5">
+                    <div class="img-wrap">
+                        <img src="assets/images/gallery-img5.webp" alt="Gallery Image 5" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="overlay-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="1.5">
+                                    <circle cx="11" cy="11" r="8" />
+                                    <path d="M21 21l-4.35-4.35M11 8v6M8 11h6" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+            <!-- /gallery-row-2 -->
+
+        </div>
+        <!-- /gallery-grid -->
+
+    </section>
+
     <!-- Contact Section -->
     <section class="contact-section" id="contact">
         <div class="contact-inner">
@@ -419,7 +527,7 @@
             </div>
         </div>
     </footer>
-    <script src="assets/js/app.js"></script>
 </body>
+<script src="assets/js/app.js"></script>
 
 </html>
