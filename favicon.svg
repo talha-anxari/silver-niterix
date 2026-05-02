@@ -1,0 +1,17 @@
+<svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="64" height="64" fill="#0e0c0a"/>
+  <!-- Gold border -->
+  <rect x="1.5" y="1.5" width="61" height="61" fill="none" stroke="#C9A84C" stroke-width="1" opacity="0.55"/>
+  <!-- SN monogram -->
+  <text
+    x="32"
+    y="43"
+    text-anchor="middle"
+    font-family="Cormorant Garamond, Georgia, 'Times New Roman', serif"
+    font-size="30"
+    font-weight="600"
+    fill="#C9A84C"
+    letter-spacing="-1"
+  >SN</text>
+</svg>
