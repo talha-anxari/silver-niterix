@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lynn Silver — Author | SilverNitrix</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <!-- Remix icon -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.js"></script>
+    <!-- css link -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- responsive link -->
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <!-- Favicon link -->
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="shortcut icon" href="favicon.ico">
+
+</head>
+
+<body>
+
+    <!-- Loader -->
+    <div id="loader">
+        <div class="loader-text">
+            <img src='assets/images/logo.webp' alt="SilverNitrix Logo" class="loader-logo">
+        </div>
+        <div class="loader-bar">
+            <div class="loader-fill"></div>
+        </div>
+    </div>
+
+    <!-- Custom Cursor -->
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-ring" id="cursorRing"></div>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+        <a href="index.html" class="logo">
+            <img src="assets/images/logo.webp" loading="lazy" alt="SilverNitrix Logo">
+        </a>
+
+        <!-- Hamburger Menu Button -->
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <!-- Navigation Links -->
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html#home">Home</a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#books">Books</a></li>
+            <li><a href="index.html#chapters">Chapters</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="music.html">Music</a></li>
+            <li><a href="index.html#contact">Contact Us</a></li>
+        </ul>
+    </nav>
+    <div id="menuOverlay"></div>
+
+    <section class="gallery-section" id="gallery">
+
+        <!-- Header -->
+        <div class="gallery-header reveal">
+            <p class="section-label">Visual Journey</p>
+            <h2 class="section-title">The <em>Gallery</em></h2>
+            <div class="title-divider"></div>
+        </div>
+
+        <!-- Gallery Grid -->
+        <div class="gallery-grid">
+
+            <!-- Row 1: Images 1, 2, 3 -->
+            <a class="gallery-item reveal" href="assets/images/gallery-img6.webp" data-fancybox="gallery"
+                data-caption="Gallery Image 1">
+                <div class="img-wrap">
+                    <img src="assets/images/gallery-img6.webp" alt="Gallery Image 1" loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="overlay-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.5">
+                                <circle cx="11" cy="11" r="8" />
+                                <path d="M21 21l-4.35-4.35M11 8v6M8 11h6" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a class="gallery-item reveal" href="assets/images/gallery-img7.webp" data-fancybox="gallery"
+                data-caption="Gallery Image 2">
+                <div class="img-wrap">
+                    <img src="assets/images/gallery-img7.webp" alt="Gallery Image 2" loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="overlay-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.5">
+                                <circle cx="11" cy="11" r="8" />
+                                <path d="M21 21l-4.35-4.35M11 8v6M8 11h6" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a class="gallery-item reveal" href="assets/images/gallery-img8.webp" data-fancybox="gallery"
+                data-caption="Gallery Image 3">
+                <div class="img-wrap">
+                    <img src="assets/images/gallery-img8.webp" alt="Gallery Image 3" loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="overlay-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.5">
+                                <circle cx="11" cy="11" r="8" />
+                                <path d="M21 21l-4.35-4.35M11 8v6M8 11h6" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Row 2: Images 4 & 5 — centered in 2-col wrapper -->
+            <div class="gallery-row-2">
+
+                <a class="gallery-item reveal" href="assets/images/gallery-img9.webp" data-fancybox="gallery"
+                    data-caption="Gallery Image 4">
+                    <div class="img-wrap">
+                        <img src="assets/images/gallery-img9.webp" alt="Gallery Image 4" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="overlay-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="1.5">
+                                    <circle cx="11" cy="11" r="8" />
+                                    <path d="M21 21l-4.35-4.35M11 8v6M8 11h6" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <a class="gallery-item reveal" href="assets/images/gallery-img10.webp" data-fancybox="gallery"
+                    data-caption="Gallery Image 5">
+                    <div class="img-wrap">
+                        <img src="assets/images/gallery-img10.webp" alt="Gallery Image 5" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="overlay-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="1.5">
+                                    <circle cx="11" cy="11" r="8" />
+                                    <path d="M21 21l-4.35-4.35M11 8v6M8 11h6" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a class="gallery-item reveal" href="assets/images/gallery-img11.webp" data-fancybox="gallery"
+                    data-caption="Gallery Image 5">
+                    <div class="img-wrap">
+                        <img src="assets/images/gallery-img11.webp" alt="Gallery Image 5" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="overlay-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="1.5">
+                                    <circle cx="11" cy="11" r="8" />
+                                    <path d="M21 21l-4.35-4.35M11 8v6M8 11h6" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a class="gallery-item reveal" href="assets/images/gallery-img12.webp" data-fancybox="gallery"
+                    data-caption="Gallery Image 5">
+                    <div class="img-wrap">
+                        <img src="assets/images/gallery-img12.webp" alt="Gallery Image 5" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="overlay-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="1.5">
+                                    <circle cx="11" cy="11" r="8" />
+                                    <path d="M21 21l-4.35-4.35M11 8v6M8 11h6" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a class="gallery-item reveal" href="assets/images/gallery-img13.webp" data-fancybox="gallery"
+                    data-caption="Gallery Image 5">
+                    <div class="img-wrap">
+                        <img src="assets/images/gallery-img13.webp" alt="Gallery Image 5" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="overlay-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="1.5">
+                                    <circle cx="11" cy="11" r="8" />
+                                    <path d="M21 21l-4.35-4.35M11 8v6M8 11h6" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+            <!-- /gallery-row-2 -->
+
+        </div>
+        <!-- /gallery-grid -->
+
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+        <div class="contact-inner">
+            <div class="reveal">
+                <p class="section-label">Get in Touch</p>
+                <h2 class="section-title" style="color:var(--cream)">Contact <em>Us</em></h2>
+                <p class="section-text">Have a question, want to collaborate, or simply want to share how the book moved
+                    you? We'd love to hear from you.</p>
+            </div>
+            <form class="contact-form reveal" onsubmit="return false;">
+                <div class="form-row">
+                    <div class="form-field">
+                        <label>Your Name</label>
+                        <input type="text" placeholder="Lynn Silver">
+                    </div>
+                    <div class="form-field">
+                        <label>Email Address</label>
+                        <input type="email" placeholder="hello@example.com">
+                    </div>
+                </div>
+                <div class="form-field">
+                    <label>Subject</label>
+                    <input type="text" placeholder="Book Inquiry...">
+                </div>
+                <div class="form-field">
+                    <label>Message</label>
+                    <textarea placeholder="Write your message here..."></textarea>
+                </div>
+                <button class="btn-submit" type="submit"><span>Send Message</span></button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-section">
+        <div class="container">
+            <div class="footer-grid">
+
+                <div class="footer-col brand-info">
+                    <div class="logo">
+                        <!-- <span class="gold-text-script">ls</span> -->
+                        <h2>Lynn Silver</h2>
+                    </div>
+                    <p class="description">
+                        Welcome to Lynn Silver's website! Discover her exciting superhero stories, learn about her
+                        journey as an author, and explore themes of resilience, family, and hope.
+                    </p>
+                    <div class="social-icons">
+                        <a href="#" class="icon-box">
+                            <i class="ri-facebook-fill"></i>
+                        </a>
+                        <a href="#" class="icon-box">
+                            <i class="ri-twitter-x-fill"></i> </a>
+                        <a href="#" class="icon-box">
+                            <i class="ri-instagram-line"></i>
+                        </a>
+                        <a href="#" class="icon-box">
+                            <i class="ri-linkedin-box-fill"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul class="links-list">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#about">About The Author</a></li>
+                        <li><a href="#books">Book</a></li>
+                        <li><a href="#chapters">Chapters</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                        <li><a href="#contact">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Contact Info</h3>
+
+                    <!-- <div class="contact-item">
+                        <div class="footer-link">
+                            <strong><i class="ri-map-pin-2-fill"></i> ADDRESS</strong>
+                            <p class="street">Abc Street Lorem Ipsum is simply dummy text</p>
+                        </div>
+                    </div> -->
+
+                    <!-- <div class="contact-item">
+                        <div class="footer-link">
+                            <strong><i class="ri-phone-fill"></i> CALL US 24/7</strong>
+                            <p class="street"><a href="tel:+1234567890">(123) 456-7890</a></p>
+                        </div>
+                    </div> -->
+
+                    <div class="contact-item">
+                        <div class="footer-link">
+                            <strong><i class="ri-mail-send-fill"></i> E-MAIL</strong>
+                            <p class="street"><a
+                                    href="mailto:silvernitirixcomics@gmail.com">silvernitirixcomics@gmail.com</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Contact Form</h3>
+                    <form class="footer-form">
+                        <div class="input-group">
+                            <input type="text" placeholder="Name" required>
+                            <input type="email" placeholder="E-mail" required>
+                        </div>
+                        <textarea placeholder="Message" rows="3"></textarea>
+                        <button class="btn-submit" type="submit"><span>Send Message</span></button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+</body>
+<script src="assets/js/app.js"></script>
+
+</html>

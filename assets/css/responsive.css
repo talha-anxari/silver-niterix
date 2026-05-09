@@ -12,13 +12,27 @@
     
 }
 @media(max-width: 991px){
+    .cursor-ring{
+        display: none;
+    }
+    .cursor{
+        display: none;
+    }
+    .chapters-grid {
+    grid-template-columns: 1fr 1fr;
+}
+.form-row {
+    grid-template-columns: 1fr 1fr;
+}
     
 }
 @media(max-width: 767px){
     .hero-content {
     display: flex;
     align-items: center;
-    flex-direction: column-reverse;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 4rem;
 }
 .book-mockup{
     height: auto;
@@ -27,9 +41,18 @@
         grid-template-columns: 1fr 1fr;
     }
 .hero {
-    min-height: 890px;
+    min-height: 1030px;
 }
-    
+
+.gallery-header {
+    margin-top: 2rem;
+}
+    .hero-subtitle {
+    margin-bottom: 1.5rem;
+}
+.hero-subtitle {
+    max-width: 100%;
+}
 }
 @media(max-width: 575px){
     .hero-subtitle {
@@ -37,7 +60,7 @@
 }
 
 .hero {
-    min-height: 900px;
+    min-height: 1060px;
 }
 
 .hero-content {
@@ -103,6 +126,25 @@
 #cursorRing {
     display: none;
 }
+.logo {
+    width: 120px;
+}
+
+nav {
+    padding: 0rem 1rem;
+}
+.loader-logo {
+    width: 200px;
+}
+.gallery-header {
+        margin-top: 0rem;
+    }
+    .form-row{
+        grid-template-columns: 1fr;
+    }
+        .music-section {
+        padding: 7rem 16px 2rem;
+    }
 }
 @media(max-width: 320px){
     

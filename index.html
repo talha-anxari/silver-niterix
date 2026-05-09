@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.css" />
 
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.js"></script>
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
     <!-- css link -->
     <link rel="stylesheet" href="assets/css/style.css">
     <!-- responsive link -->
@@ -29,7 +31,9 @@
 
     <!-- Loader -->
     <div id="loader">
-        <div class="loader-text">SilverNitrix</div>
+        <div class="loader-text">
+            <img src='assets/images/logo.webp' alt="SilverNitrix Logo" class="loader-logo">
+        </div>
         <div class="loader-bar">
             <div class="loader-fill"></div>
         </div>
@@ -41,7 +45,9 @@
 
     <!-- Navigation -->
     <nav id="navbar">
-        <a href="#" class="logo">Silver<span>Nitrix</span></a>
+        <a href="index.html" class="logo">
+            <img src="assets/images/logo.webp" loading="lazy" alt="SilverNitrix Logo">
+        </a>
 
         <!-- Hamburger Menu Button -->
         <button class="hamburger" id="hamburger" aria-label="Menu">
@@ -52,41 +58,40 @@
 
         <!-- Navigation Links -->
         <ul class="nav-links" id="navLinks">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#books">Books</a></li>
-            <li><a href="#chapters">Chapters</a></li>
-            <li><a href="#gallery">Gallery</a></li>
-            <li><a href="#contact">Contact Us</a></li>
+            <li><a href="index.html#home">Home</a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#books">Books</a></li>
+            <li><a href="index.html#chapters">Chapters</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="music.html">Music</a></li>
+            <li><a href="index.html#contact">Contact Us</a></li>
         </ul>
     </nav>
     <div id="menuOverlay"></div>
 
     <!-- Hero Section -->
     <section class="hero" id="home">
+
         <div class="hero-bg"></div>
-        <!-- Stars -->
         <div class="stars" id="stars"></div>
 
         <div class="hero-content">
+
+            <!-- ===== LEFT TEXT ===== -->
             <div class="hero-text">
                 <p class="hero-eyebrow">Welcome To The Official Website Of</p>
                 <h1 class="hero-title">
-                    <!-- Stories That <em>Awaken</em><br>
-                    The Power Within
-                    <em></em>  -->
-                    POWERS UNLEASHED II
+                    POWERS UNLEASHED
+                    <span>I &amp; II</span>
                 </h1>
                 <p class="hero-subtitle">
-                    Welcome to •powers Unleashed", an action-packed
-                    superhero adventure that will keep you on the edge
-                    of your seat! Step into the thrilling world of two
-                    powerful the Dark Ninja and Queen Phenix,
-                    as they battle against the dangerous forces tearing
-                    their city apart
+                    Welcome to "Powers Unleashed", an action-packed superhero adventure
+                    that will keep you on the edge of your seat! Step into the thrilling
+                    world of two powerful heroes — the Dark Ninja and Queen Phenix —
+                    as they battle against the dangerous forces tearing their city apart.
                 </p>
-                <a href="https://www.amazon.com/amz-books/store?ou=psf&ccs_id=90cc7594-b53e-44ce-ae36-b3bd2c083ead"
-                    target="_blank" class="hero-cta">
+                <a href="https://www.amazon.com/Powers-Unleashed-Lynn-Silver-ebook/dp/B0DSWFNCPY/" target="_blank"
+                    class="hero-cta">
                     <span>Explore the Book</span>
                     <svg width="16" height="10" viewBox="0 0 16 10" fill="none">
                         <path d="M1 5H15M11 1L15 5L11 9" stroke="currentColor" stroke-width="1.5"
@@ -95,19 +100,51 @@
                 </a>
             </div>
 
+            <!-- ===== RIGHT — BOOK SWIPER ===== -->
             <div class="hero-book-wrap">
                 <div class="book-glow"></div>
-                <div class="book-mockup">
-                    <div class="book-cover">
-                        <!-- <div class="book-cover-title">Powers<br>Unleashed</div>
-                        <div class="book-cover-ornament"></div>
-                        <div class="book-cover-sub">A Novel</div>
-                        <div class="book-cover-author">Lynn Silver</div> -->
-                        <img src="assets/images/hero-img2.webp" alt="image">
+
+                <div class="swiper books_swiper">
+                    <div class="swiper-wrapper">
+                        <!-- Slide 1: Powers Unleashed I (Published) -->
+                        <div class="swiper-slide">
+                            <div class="book-box">
+                                <div class="book-cover-3d">
+                                    <img src="assets/images/hero-img2.webp" alt="Powers Unleashed I">
+                                </div>
+                                <div class="book-slide-label">
+                                    <h4>Powers Unleashed</h4>
+                                    <p>Lynn Silver</p>
+                                    <span class="slide-tag available">Available on Amazon</span>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- Slide 2: Powers Unleashed II (Coming Soon) -->
+                        <div class="swiper-slide">
+                            <div class="book-box">
+                                <div class="book-cover-3d">
+                                    <img src="assets/images/hero-img.webp" alt="Powers Unleashed II">
+
+                                    <!-- Coming Soon Overlay -->
+                                    <div class="coming-soon-overlay">
+                                        <span class="coming-soon-badge">Coming Soon</span>
+                                        <p class="coming-soon-text">Powers Unleashed II<br>is on its way</p>
+                                    </div>
+                                </div>
+                                <div class="book-slide-label">
+                                    <h4>Powers Unleashed II</h4>
+                                    <p>Lynn Silver</p>
+                                    <span class="slide-tag soon">Coming Soon</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
+                    <!-- Pagination -->
+                    <div class="swiper-pagination"></div>
                 </div>
             </div>
-        </div>
     </section>
 
     <div class="divider"></div>
@@ -131,7 +168,7 @@
             </div>
 
             <div class="reveal-right">
-                <p class="section-label">About the Author</p>
+                <p class="section-label"> <span></span> About the Author</p>
                 <h2 class="section-title">Meet <em>Lynn Silver</em></h2>
                 <p class="section-text">
                     Lynn Silver is a visionary author whose writing explores the extraordinary potential that lies
@@ -157,7 +194,7 @@
     <section class="books-section" id="books">
 
         <div class="books-header reveal">
-            <p class="section-label">Published Works</p>
+            <p class="section-label"><span></span> Published Works</p>
             <h2 class="section-title">The <em>Books</em></h2>
         </div>
 
@@ -189,33 +226,32 @@
             </div> -->
 
             <!-- ===== BOOK 2 (Landscape image — add class img-landscape if needed) ===== -->
-            <div class="book-card reveal" style="transition-delay: 0.15s">
+            <!-- <div class="book-card reveal" style="transition-delay: 0.15s">
                 <div class="book-img-wrap img-landscape">
-                    <!-- img-landscape class caps height at 340px for wide/landscape images -->
-                    <img src="assets/images/book1.webp" alt="The Next Chapter">
+                    <img src="assets/images/hero-img2.webp" alt="The Next Chapter">
                 </div>
                 <div class="book-info">
-                    <span class="book-tag coming-soon">Coming Soon</span>
-                    <h3 class="book-title">YOU'RE NOT ALONE:</h3>
+                    <span class="book-tag coming-soon"></span>
+                    <h3 class="book-title">POWERS UNLEASHED:</h3>
                     <p class="book-desc">
                         The journey continues. Lynn Silver's highly anticipated second book is in the making.
                         Stay tuned for an unforgettable continuation.
                     </p>
                     <div class="coming-soon-label">— Available Soon —</div>
                 </div>
-            </div>
+            </div> -->
 
             <!-- ===== BOOK 3 (Portrait image) ===== -->
-            <!-- <div class="book-card reveal" style="transition-delay: 0.3s">
+            <div class="book-card reveal" style="transition-delay: 0.3s">
                 <div class="book-img-wrap">
-                    <img src="assets/images/book3.webp" alt="Book Three">
+                    <img src="assets/images/hero-img2.webp" alt="Book Three">
                 </div>
                 <div class="book-info">
                     <span class="book-tag available">Available on Amazon</span>
-                    <h3 class="book-title">SILVER NITRIX UNIVERSE</h3>
+                    <h3 class="book-title">POWERS UNLEASHED I</h3>
                     <p class="book-desc">
-                        She hears what others can't.
-                        He appears when she needs him.
+                        “Powers Unleashed” by Lynn Silver is a gripping tale set in a city plagued by a deadly drug
+                        epidemic.
                     </p>
                     <a href="https://www.amazon.com/Silver-Nitrix-Universe-Lynn-Silver-ebook/dp/B0DSWFNCPY/"
                         target="_blank" class="btn-amazon">
@@ -227,7 +263,7 @@
                         Buy on Amazon
                     </a>
                 </div>
-            </div> -->
+            </div>
 
             <!-- ===== BOOK 4 (Landscape image) ===== -->
             <div class="book-card reveal" style="transition-delay: 0.45s">
@@ -236,7 +272,7 @@
                 </div>
                 <div class="book-info">
                     <span class="book-tag coming-soon">Coming Soon</span>
-                    <h3 class="book-title">THE COMMANDER</h3>
+                    <h3 class="book-title">POWERS UNLEASHED II</h3>
                     <p class="book-desc">
                         THEY ALL DIED THAT DAY...
                         BUT SOMETHING
@@ -267,7 +303,7 @@
     <!-- Chapters Section -->
     <section class="chapters-section" id="chapters">
         <div class="chapters-header reveal">
-            <p class="section-label">Inside the Book</p>
+            <p class="section-label"><span></span> Inside the Book</p>
             <h2 class="section-title">The <em>Chapters</em></h2>
             <p class="section-text" style="max-width:500px">
                 Journey through a world of awakening powers, hidden truths, and the enduring strength of the human
@@ -317,115 +353,12 @@
 
     <div class="divider"></div>
 
-    <section class="gallery-section" id="gallery">
-
-        <!-- Header -->
-        <div class="gallery-header reveal">
-            <p class="section-label">Visual Journey</p>
-            <h2 class="section-title">The <em>Gallery</em></h2>
-            <div class="title-divider"></div>
-        </div>
-
-        <!-- Gallery Grid -->
-        <div class="gallery-grid">
-
-            <!-- Row 1: Images 1, 2, 3 -->
-            <a class="gallery-item reveal" href="assets/images/gallery-img1.webp" data-fancybox="gallery"
-                data-caption="Gallery Image 1">
-                <div class="img-wrap">
-                    <img src="assets/images/gallery-img1.webp" alt="Gallery Image 1" loading="lazy">
-                    <div class="gallery-overlay">
-                        <div class="overlay-icon">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="1.5">
-                                <circle cx="11" cy="11" r="8" />
-                                <path d="M21 21l-4.35-4.35M11 8v6M8 11h6" />
-                            </svg>
-                        </div>
-                    </div>
-                </div>
-            </a>
-
-            <a class="gallery-item reveal" href="assets/images/gallery-img2.webp" data-fancybox="gallery"
-                data-caption="Gallery Image 2">
-                <div class="img-wrap">
-                    <img src="assets/images/gallery-img2.webp" alt="Gallery Image 2" loading="lazy">
-                    <div class="gallery-overlay">
-                        <div class="overlay-icon">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="1.5">
-                                <circle cx="11" cy="11" r="8" />
-                                <path d="M21 21l-4.35-4.35M11 8v6M8 11h6" />
-                            </svg>
-                        </div>
-                    </div>
-                </div>
-            </a>
-
-            <a class="gallery-item reveal" href="assets/images/gallery-img3.webp" data-fancybox="gallery"
-                data-caption="Gallery Image 3">
-                <div class="img-wrap">
-                    <img src="assets/images/gallery-img3.webp" alt="Gallery Image 3" loading="lazy">
-                    <div class="gallery-overlay">
-                        <div class="overlay-icon">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="1.5">
-                                <circle cx="11" cy="11" r="8" />
-                                <path d="M21 21l-4.35-4.35M11 8v6M8 11h6" />
-                            </svg>
-                        </div>
-                    </div>
-                </div>
-            </a>
-
-            <!-- Row 2: Images 4 & 5 — centered in 2-col wrapper -->
-            <div class="gallery-row-2">
-
-                <a class="gallery-item reveal" href="assets/images/gallery-img4.webp" data-fancybox="gallery"
-                    data-caption="Gallery Image 4">
-                    <div class="img-wrap">
-                        <img src="assets/images/gallery-img4.webp" alt="Gallery Image 4" loading="lazy">
-                        <div class="gallery-overlay">
-                            <div class="overlay-icon">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                    stroke-width="1.5">
-                                    <circle cx="11" cy="11" r="8" />
-                                    <path d="M21 21l-4.35-4.35M11 8v6M8 11h6" />
-                                </svg>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-
-                <a class="gallery-item reveal" href="assets/images/gallery-img5.webp" data-fancybox="gallery"
-                    data-caption="Gallery Image 5">
-                    <div class="img-wrap">
-                        <img src="assets/images/gallery-img5.webp" alt="Gallery Image 5" loading="lazy">
-                        <div class="gallery-overlay">
-                            <div class="overlay-icon">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                    stroke-width="1.5">
-                                    <circle cx="11" cy="11" r="8" />
-                                    <path d="M21 21l-4.35-4.35M11 8v6M8 11h6" />
-                                </svg>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-
-            </div>
-            <!-- /gallery-row-2 -->
-
-        </div>
-        <!-- /gallery-grid -->
-
-    </section>
 
     <!-- Contact Section -->
     <section class="contact-section" id="contact">
         <div class="contact-inner">
             <div class="reveal">
-                <p class="section-label">Get in Touch</p>
+                <p class="section-label"><span></span> Get in Touch</p>
                 <h2 class="section-title" style="color:var(--cream)">Contact <em>Us</em></h2>
                 <p class="section-text">Have a question, want to collaborate, or simply want to share how the book moved
                     you? We'd love to hear from you.</p>
@@ -498,12 +431,12 @@
                 <div class="footer-col">
                     <h3>Contact Info</h3>
 
-                    <div class="contact-item">
+                    <!-- <div class="contact-item">
                         <div class="footer-link">
                             <strong><i class="ri-map-pin-2-fill"></i> ADDRESS</strong>
                             <p class="street">Abc Street Lorem Ipsum is simply dummy text</p>
                         </div>
-                    </div>
+                    </div> -->
 
                     <!-- <div class="contact-item">
                         <div class="footer-link">
@@ -515,7 +448,8 @@
                     <div class="contact-item">
                         <div class="footer-link">
                             <strong><i class="ri-mail-send-fill"></i> E-MAIL</strong>
-                            <p class="street"><a href="mailto:lillyfrogger2012@gmail.com">lillyfrogger2012@gmail.com</a>
+                            <p class="street"><a
+                                    href="mailto:silvernitirixcomics@gmail.com">silvernitirixcomics@gmail.com</a>
                             </p>
                         </div>
                     </div>
@@ -536,7 +470,9 @@
             </div>
         </div>
     </footer>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <script src="assets/js/app.js"></script>
 </body>
-<script src="assets/js/app.js"></script>
 
 </html>

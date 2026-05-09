@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lynn Silver — Author | SilverNitrix</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <!-- Remix icon -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.js"></script>
+    <!-- css link -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- responsive link -->
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <!-- Favicon link -->
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="shortcut icon" href="favicon.ico">
+
+</head>
+
+<body>
+
+    <!-- Loader -->
+    <div id="loader">
+        <div class="loader-text">
+            <img src='assets/images/logo.webp' alt="SilverNitrix Logo" class="loader-logo">
+        </div>
+        <div class="loader-bar">
+            <div class="loader-fill"></div>
+        </div>
+    </div>
+
+    <!-- Custom Cursor -->
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-ring" id="cursorRing"></div>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+        <a href="index.html" class="logo">
+            <img src="assets/images/logo.webp" loading="lazy" alt="SilverNitrix Logo">
+        </a>
+
+        <!-- Hamburger Menu Button -->
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <!-- Navigation Links -->
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html#home">Home</a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#books">Books</a></li>
+            <li><a href="index.html#chapters">Chapters</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="music.html">Music</a></li>
+            <li><a href="index.html#contact">Contact Us</a></li>
+        </ul>
+    </nav>
+    <div id="menuOverlay"></div>
+
+    <section class="music-section" id="music">
+
+        <div class="music-header reveal">
+            <p class="section-label"><span></span> Original Tracks</p>
+            <h2 class="section-title">The <em>Music</em></h2>
+            <div class="title-divider"></div>
+        </div>
+
+        <div class="songs-grid">
+
+            <!-- ===== SONG CARD 1 ===== -->
+            <!-- 
+        HOW TO ADD MORE SONGS:
+        Copy this entire .song-card div and paste below.
+        Change: data-src, album art src, song title, artist, genre, duration.
+        Each card works independently.
+      -->
+            <div class="song-card reveal" id="card-1" data-src="assets/audio/song1.mp3">
+
+                <!-- Album Art -->
+                <div class="album-art-wrap">
+                    <span class="track-badge">Track 01</span>
+                    <img src="assets/images/donna-v2.webp" alt="Song Title Album Art">
+
+                    <!-- Vinyl -->
+                    <div class="vinyl-overlay"></div>
+
+                    <!-- Play button on image -->
+                    <button class="art-play-btn" aria-label="Play">
+                        <svg class="icon-play" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                            <polygon points="5,3 19,12 5,21" />
+                        </svg>
+                        <svg class="icon-pause" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"
+                            style="display:none">
+                            <rect x="6" y="4" width="4" height="16" rx="1" />
+                            <rect x="14" y="4" width="4" height="16" rx="1" />
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- Card Body -->
+                <div class="song-body">
+
+                    <div class="song-meta">
+                        <span class="song-genre">Pop / R&amp;B</span>
+                        <span class="song-duration" data-duration>0:00</span>
+                    </div>
+
+                    <h3 class="song-title">Where Legends Rise</h3>
+                    <p class="song-artist">Lynn Silver</p>
+
+                    <!-- Progress -->
+                    <div class="progress-wrap">
+                        <div class="progress-bar-track" data-seek>
+                            <div class="progress-bar-fill" data-fill></div>
+                        </div>
+                        <div class="progress-times">
+                            <span data-current>0:00</span>
+                            <span data-total>0:00</span>
+                        </div>
+                    </div>
+
+                    <!-- Controls -->
+                    <div class="song-controls">
+
+                        <div class="controls-center">
+                            <!-- Rewind 10s -->
+                            <button class="ctrl-btn" data-rewind aria-label="Rewind 10 seconds">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="1.5" stroke-linecap="round">
+                                    <polyline points="1 4 1 10 7 10" />
+                                    <path d="M3.51 15a9 9 0 1 0 .49-4.5" />
+                                    <text x="8" y="14" font-size="6" fill="currentColor" stroke="none"
+                                        font-family="sans-serif">10</text>
+                                </svg>
+                            </button>
+
+                            <!-- Main Play/Pause -->
+                            <button class="ctrl-btn play-main" data-playpause aria-label="Play / Pause">
+                                <svg class="icon-play" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                    <polygon points="5,3 19,12 5,21" />
+                                </svg>
+                                <svg class="icon-pause" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"
+                                    style="display:none">
+                                    <rect x="6" y="4" width="4" height="16" rx="1" />
+                                    <rect x="14" y="4" width="4" height="16" rx="1" />
+                                </svg>
+                            </button>
+
+                            <!-- Forward 10s -->
+                            <button class="ctrl-btn" data-forward aria-label="Forward 10 seconds">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="1.5" stroke-linecap="round">
+                                    <polyline points="23 4 23 10 17 10" />
+                                    <path d="M20.49 15a9 9 0 1 1-.49-4.5" />
+                                    <text x="8" y="14" font-size="6" fill="currentColor" stroke="none"
+                                        font-family="sans-serif">10</text>
+                                </svg>
+                            </button>
+                        </div>
+
+                        <!-- Volume + Waveform -->
+                        <div style="display:flex; align-items:center; gap:12px;">
+                            <!-- Animated waveform bars -->
+                            <div class="waveform" data-waveform>
+                                <div class="waveform-bar" style="--h:8px;  --dur:0.6s"></div>
+                                <div class="waveform-bar" style="--h:14px; --dur:0.9s"></div>
+                                <div class="waveform-bar" style="--h:18px; --dur:0.7s"></div>
+                                <div class="waveform-bar" style="--h:10px; --dur:1.1s"></div>
+                                <div class="waveform-bar" style="--h:16px; --dur:0.8s"></div>
+                                <div class="waveform-bar" style="--h:6px;  --dur:0.65s"></div>
+                                <div class="waveform-bar" style="--h:12px; --dur:0.95s"></div>
+                            </div>
+
+                            <div class="volume-wrap">
+                                <button class="ctrl-btn" data-mute aria-label="Mute">
+                                    <svg class="icon-vol" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                        stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+                                        <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" />
+                                        <path d="M15.54 8.46a5 5 0 0 1 0 7.07" />
+                                        <path d="M19.07 4.93a10 10 0 0 1 0 14.14" />
+                                    </svg>
+                                    <svg class="icon-muted" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                        stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                        style="display:none">
+                                        <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" />
+                                        <line x1="23" y1="9" x2="17" y2="15" />
+                                        <line x1="17" y1="9" x2="23" y2="15" />
+                                    </svg>
+                                </button>
+                                <input class="volume-slider" type="range" min="0" max="1" step="0.01" value="1"
+                                    data-volume aria-label="Volume">
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!-- /song-card-1 -->
+
+            <!--
+      ╔══════════════════════════════════════════╗
+      ║  FUTURE SONGS: Paste new .song-card here  ║
+      ╚══════════════════════════════════════════╝
+      -->
+
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+        <div class="contact-inner">
+            <div class="reveal">
+                <p class="section-label">Get in Touch</p>
+                <h2 class="section-title" style="color:var(--cream)">Contact <em>Us</em></h2>
+                <p class="section-text">Have a question, want to collaborate, or simply want to share how the book moved
+                    you? We'd love to hear from you.</p>
+            </div>
+            <form class="contact-form reveal" onsubmit="return false;">
+                <div class="form-row">
+                    <div class="form-field">
+                        <label>Your Name</label>
+                        <input type="text" placeholder="Lynn Silver">
+                    </div>
+                    <div class="form-field">
+                        <label>Email Address</label>
+                        <input type="email" placeholder="hello@example.com">
+                    </div>
+                </div>
+                <div class="form-field">
+                    <label>Subject</label>
+                    <input type="text" placeholder="Book Inquiry...">
+                </div>
+                <div class="form-field">
+                    <label>Message</label>
+                    <textarea placeholder="Write your message here..."></textarea>
+                </div>
+                <button class="btn-submit" type="submit"><span>Send Message</span></button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-section">
+        <div class="container">
+            <div class="footer-grid">
+
+                <div class="footer-col brand-info">
+                    <div class="logo">
+                        <!-- <span class="gold-text-script">ls</span> -->
+                        <h2>Lynn Silver</h2>
+                    </div>
+                    <p class="description">
+                        Welcome to Lynn Silver's website! Discover her exciting superhero stories, learn about her
+                        journey as an author, and explore themes of resilience, family, and hope.
+                    </p>
+                    <div class="social-icons">
+                        <a href="#" class="icon-box">
+                            <i class="ri-facebook-fill"></i>
+                        </a>
+                        <a href="#" class="icon-box">
+                            <i class="ri-twitter-x-fill"></i> </a>
+                        <a href="#" class="icon-box">
+                            <i class="ri-instagram-line"></i>
+                        </a>
+                        <a href="#" class="icon-box">
+                            <i class="ri-linkedin-box-fill"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul class="links-list">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#about">About The Author</a></li>
+                        <li><a href="#books">Book</a></li>
+                        <li><a href="#chapters">Chapters</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                        <li><a href="#contact">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Contact Info</h3>
+
+                    <!-- <div class="contact-item">
+                        <div class="footer-link">
+                            <strong><i class="ri-map-pin-2-fill"></i> ADDRESS</strong>
+                            <p class="street">Abc Street Lorem Ipsum is simply dummy text</p>
+                        </div>
+                    </div> -->
+
+                    <!-- <div class="contact-item">
+                        <div class="footer-link">
+                            <strong><i class="ri-phone-fill"></i> CALL US 24/7</strong>
+                            <p class="street"><a href="tel:+1234567890">(123) 456-7890</a></p>
+                        </div>
+                    </div> -->
+
+                    <div class="contact-item">
+                        <div class="footer-link">
+                            <strong><i class="ri-mail-send-fill"></i> E-MAIL</strong>
+                            <p class="street"><a
+                                    href="mailto:silvernitirixcomics@gmail.com">silvernitirixcomics@gmail.com</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Contact Form</h3>
+                    <form class="footer-form">
+                        <div class="input-group">
+                            <input type="text" placeholder="Name" required>
+                            <input type="email" placeholder="E-mail" required>
+                        </div>
+                        <textarea placeholder="Message" rows="3"></textarea>
+                        <button class="btn-submit" type="submit"><span>Send Message</span></button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+</body>
+<script src="assets/js/app.js"></script>
+
+</html>
