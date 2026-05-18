@@ -2358,3 +2358,240 @@
          display: none;
      } */
  }
+
+/* ============================================
+   COMICS PAGE — Coming Soon Card
+   Add this at the bottom of your style.css
+   ============================================ */
+ 
+/* Wrapper: pushes card between nav and footer */
+
+.comics-wrapper {
+    min-height: calc(100vh - 180px); /* adjust 160px if nav/footer height differs */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 2rem;
+    
+}
+ 
+.cs-badge {
+    display: inline-block;
+    padding: 0.4rem 1.8rem;
+    border: 1px solid var(--gold);
+    color: var(--gold);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.6rem;
+    font-weight: 500;
+    letter-spacing: 0.45em;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+}
+/* ── Coming Soon Card ── */
+.coming-soon-card {
+    position: relative;
+    background: var(--dark2);
+    border: 1px solid rgba(201, 168, 76, 0.25);
+    padding: 5rem 3.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+    width: 100%;
+    max-width: 720px;
+    margin: auto;
+}
+ 
+.coming-soon-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    background: linear-gradient(to right, transparent, var(--gold), transparent);
+}
+ 
+.coming-soon-card::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 1px;
+    background: linear-gradient(to right, transparent, rgba(201, 168, 76, 0.4), transparent);
+}
+ 
+/* Decorative corner marks */
+.coming-soon-card .corner {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    border-color: var(--gold);
+    border-style: solid;
+    opacity: 0.5;
+}
+.coming-soon-card .corner.tl { top: 16px; left: 16px;   border-width: 1px 0 0 1px; }
+.coming-soon-card .corner.tr { top: 16px; right: 16px;  border-width: 1px 1px 0 0; }
+.coming-soon-card .corner.bl { bottom: 16px; left: 16px; border-width: 0 0 1px 1px; }
+.coming-soon-card .corner.br { bottom: 16px; right: 16px; border-width: 0 1px 1px 0; }
+ 
+/* Eyebrow label */
+.cs-eyebrow {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.6rem;
+    font-weight: 300;
+    letter-spacing: 0.5em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 2rem;
+}
+ 
+/* Main heading */
+.cs-main {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: clamp(1.8rem, 4vw, 3rem);
+    font-weight: 400;
+    color: var(--cream);
+    letter-spacing: 0.04em;
+    line-height: 1.25;
+    margin-bottom: 1.5rem;
+}
+ 
+.cs-main em {
+    font-style: normal;
+    color: var(--gold-light);
+}
+ 
+/* Ornament divider */
+.ornament {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2.5rem;
+}
+ 
+.ornament-line {
+    width: 60px;
+    height: 1px;
+    background: linear-gradient(to right, transparent, var(--gold));
+}
+ 
+.ornament-line.right {
+    background: linear-gradient(to left, transparent, var(--gold));
+}
+ 
+.ornament-diamond {
+    width: 8px;
+    height: 8px;
+    background: var(--gold);
+    transform: rotate(45deg);
+}
+ 
+/* Sub text */
+.cs-sub {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 1.05rem;
+    font-style: italic;
+    font-weight: 300;
+    color: var(--text-muted);
+    max-width: 520px;
+    line-height: 1.9;
+    margin-bottom: 3rem;
+}
+ 
+/* Email notify form */
+.notify-form {
+    display: flex;
+    max-width: 420px;
+    width: 100%;
+}
+ 
+.notify-input {
+    flex: 1;
+    padding: 0.85rem 1.2rem;
+    background: var(--dark3);
+    border: 1px solid rgba(201, 168, 76, 0.3);
+    border-right: none;
+    color: var(--text);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 300;
+    letter-spacing: 0.08em;
+    outline: none;
+    transition: border-color 0.3s;
+}
+ 
+.notify-input::placeholder {
+    color: var(--text-muted);
+    font-style: italic;
+}
+ 
+.notify-input:focus {
+    border-color: rgba(201, 168, 76, 0.7);
+}
+ 
+.notify-btn {
+    padding: 0.85rem 1.8rem;
+    background: var(--gold);
+    border: 1px solid var(--gold);
+    color: var(--dark);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.6rem;
+    font-weight: 500;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background 0.3s, border-color 0.3s;
+    white-space: nowrap;
+}
+ 
+.notify-btn:hover {
+    background: var(--gold-light);
+    border-color: var(--gold-light);
+}
+ 
+/* Success message */
+.success-msg {
+    display: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.65rem;
+    font-weight: 300;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold-light);
+    padding: 0.85rem 2rem;
+    border: 1px solid rgba(201, 168, 76, 0.3);
+}
+ 
+/* Fine print */
+.cs-note {
+    margin-top: 1.2rem;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.58rem;
+    font-weight: 300;
+    letter-spacing: 0.2em;
+    color: var(--text-muted);
+    text-transform: uppercase;
+}
+ 
+/* ── Responsive ── */
+@media (max-width: 768px) {
+    .comics-wrapper {
+        padding: 3rem 1.2rem;
+    }
+ 
+    .coming-soon-card {
+        padding: 3rem 1.5rem;
+    }
+ 
+    .notify-form {
+        flex-direction: column;
+    }
+ 
+    .notify-input {
+        border-right: 1px solid rgba(201, 168, 76, 0.3);
+        border-bottom: none;
+    }
+ 
+    .notify-btn {
+        padding: 0.85rem;
+    }
+}

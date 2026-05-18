@@ -506,3 +506,16 @@ const bookSwiper = new Swiper('.books_swiper', {
     }
 
 });
+
+function handleNotify() {
+      const input = document.getElementById('emailInput');
+      const form = document.getElementById('notifyForm');
+      const msg = document.getElementById('successMsg');
+      if (!input.value || !input.value.includes('@')) {
+        input.style.borderColor = 'rgba(201,80,80,0.6)';
+        setTimeout(() => input.style.borderColor = '', 1500);
+        return;
+      }
+      form.style.display = 'none';
+      msg.style.display = 'block';
+    }
